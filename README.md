@@ -9,9 +9,12 @@
 - 진행률 보기
 - `localStorage`를 이용한 데이터 영속성
 
+## 실행 방법
+`index.html`을 브라우저에서 열면 바로 실행됩니다. 데이터는 브라우저 `localStorage`에 자동 저장됩니다.
+
 ## 문서
 - [PRD.md](PRD.md) — 제품 요구사항 문서 (기능 정의, 데이터 모델, 수용 기준, 마일스톤)
 
 ## 진행 상태
 - [x] PRD 작성
-- [ ] 앱 구현 (`index.html`, `style.css`, `app.js`)
+- [x] 앱 구현 (`index.html`, `style.css`, `app.js`)

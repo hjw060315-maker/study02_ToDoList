@@ -1,0 +1,75 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #fff;
+  --text: #1f2430;
+  --muted: #8a90a0;
+  --line: #e3e6ec;
+  --primary: #3b6cf6;
+  --work: #3b6cf6;
+  --personal: #e8833a;
+  --study: #2fa36b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.header h1 { margin: 0; font-size: 1.6rem; }
+.header time { color: var(--muted); font-size: .9rem; }
+
+.warning { background: #fff3cd; border: 1px solid #ffe08a; padding: 8px 12px; border-radius: 8px; font-size: .85rem; }
+
+.progress { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.progress-text { font-weight: 600; margin-bottom: 8px; }
+.bar { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; }
+.bar-fill { height: 100%; width: 0; background: var(--primary); transition: width .2s; }
+
+.mini-progress { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.mini-progress li { font-size: .78rem; color: var(--muted); }
+.mini-progress .bar { height: 6px; margin-top: 4px; }
+
+.add-form { display: flex; gap: 8px; margin-bottom: 16px; }
+.add-form input { flex: 1; min-width: 0; }
+input[type="text"], select, button { font: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); }
+button { cursor: pointer; }
+.add-form button { background: var(--primary); color: #fff; border-color: var(--primary); }
+button:disabled { opacity: .5; cursor: default; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.tabs { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+.tabs button { border-radius: 999px; padding: 6px 14px; }
+.tabs button.active { background: var(--text); color: #fff; border-color: var(--text); }
+
+.todo-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.todo { display: flex; align-items: center; gap: 10px; background: var(--card); border-radius: 10px; padding: 10px 12px; }
+.todo input[type="checkbox"] { width: 18px; height: 18px; flex: none; }
+.todo .text { flex: 1; min-width: 0; overflow-wrap: anywhere; cursor: text; }
+.todo.done .text { text-decoration: line-through; color: var(--muted); }
+.todo .edit-input { flex: 1; min-width: 0; }
+.todo button { padding: 4px 10px; font-size: .8rem; }
+
+.badge { flex: none; color: #fff; font-size: .72rem; padding: 2px 8px; border-radius: 999px; }
+.badge.work { background: var(--work); }
+.badge.personal { background: var(--personal); }
+.badge.study { background: var(--study); }
+
+.empty { text-align: center; color: var(--muted); padding: 32px 0; }
+.footer { margin-top: 16px; text-align: right; }
+
+@media (max-width: 480px) {
+  .add-form { flex-wrap: wrap; }
+  .add-form input { flex-basis: 100%; }
+  .add-form select { flex: 1; }
+}
