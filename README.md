@@ -9,6 +9,9 @@
 - 진행률 보기
 - `localStorage`를 이용한 데이터 영속성
 
+## 배포 주소
+https://hjw060315-maker.github.io/study02_ToDoList/
+
 ## 실행 방법
 `index.html`을 브라우저에서 열면 바로 실행됩니다. 데이터는 브라우저 `localStorage`에 자동 저장됩니다.
 
